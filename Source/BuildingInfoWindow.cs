@@ -16,7 +16,7 @@ namespace ExtendedBuildings
     using System.Timers;
     using UnityEngine;
 
-    public class BuildingInfoWindow5 : UIPanel
+    public class BuildingInfoWindow : UIPanel
     {
         const float vertPadding = 26;
       
