@@ -11,7 +11,7 @@ namespace ExtendedBuildings
     public class ExtendedLoading : LoadingExtensionBase
     {
         static GameObject buildingWindowGameObject;
-        BuildingInfoWindow5 buildingWindow;
+        BuildingInfoWindow buildingWindow;
         private LoadMode _mode;
 
         public class ExtendedLoadingException : Exception
@@ -47,14 +47,14 @@ namespace ExtendedBuildings
             //        string.Join("  \n", GetUIPanelNames()));
             //    //FindObjectsOfType<UIPanel>().Select(p => p.name).ToArray()));
             //}
-            this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow5>();
+            this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow>();
             this.buildingWindow.transform.parent = buildingInfo.transform;
             this.buildingWindow.size = new Vector3(buildingInfo.size.x, buildingInfo.size.y);
             this.buildingWindow.baseBuildingWindow = buildingInfo.gameObject.transform.GetComponentInChildren<ZonedBuildingWorldInfoPanel>();
             this.buildingWindow.position = new Vector3(0, 12);
             buildingInfo.eventVisibilityChanged += buildingInfo_eventVisibilityChanged;
 
-            var serviceBuildingInfo = GetPanel("(Library) CityServiceWorldInfoPanel");//UIView.Find<UIPanel>("(Library) CityServiceWorldInfoPanel");
+            //var serviceBuildingInfo = GetPanel("(Library) CityServiceWorldInfoPanel");//UIView.Find<UIPanel>("(Library) CityServiceWorldInfoPanel");
             //if (serviceBuildingInfo == null)
             //{
             //    throw new ExtendedLoadingException("UIPanel not found (update broke the mod!): (Library) CityServiceWorldInfoPanel\nAvailable panels are:\n" +
