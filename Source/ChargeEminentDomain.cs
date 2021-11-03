@@ -43,7 +43,7 @@ namespace EminentDomain.Source
 
             //DebugOutputPanel.AddMessage(PluginManager.MessageType.Message, "AutoRemove :" + buildingInfo.m_autoRemove);
 
-            if (buildingService == ItemClass.Service.Residential || buildingService == ItemClass.Service.Commercial || buildingService == ItemClass.Service.Industrial)// && building.CheckZoning(ItemClass.Zone.ResidentialLow, ItemClass.Zone.ResidentialHigh, false) == false)
+            if (buildingService == ItemClass.Service.Office || buildingService == ItemClass.Service.Residential || buildingService == ItemClass.Service.Commercial || buildingService == ItemClass.Service.Industrial)// && building.CheckZoning(ItemClass.Zone.ResidentialLow, ItemClass.Zone.ResidentialHigh, false) == false)
             {
                 if (subService == ItemClass.SubService.ResidentialLow ||
                     subService == ItemClass.SubService.ResidentialLowEco ||
